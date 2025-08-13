@@ -17,11 +17,12 @@ async function search() {
     } else if(data[0].phonetics.length !== 0){
       html += `<p><b>Phonetic:</b> ${data[0].phonetics[1].text}</p>`
     }
-    console.log(data)
     result.innerHTML = html;
-  }
+  }  else{
+      alert('Please enter a valid English word')
+    }
   } catch(err){
-    console.log(err)
+    alert('Please check your internet connection and try again')
   }
 }
 
